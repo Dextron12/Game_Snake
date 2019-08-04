@@ -1,16 +1,19 @@
 import pygame, random
+from pathlib import Path
 
 screen = pygame.display.set_mode((800,600))
 width,height = 800,600
 clock = pygame.time.Clock()
 colour = "red"
 
-apple = pygame.image.load("apple.png")
-banana = pygame.image.load("banana.png")
-bomb = pygame.image.load("bomb.png")
-berry = pygame.image.load("berry.png")
+path = Path(__file__).parents[1]
 
-bg = pygame.image.load('snake_BG.jpg')
+apple = pygame.image.load(str(path) + '\\Game_Snake\\' + "apple.png")
+banana = pygame.image.load(str(path) + '\\Game_Snake\\' + "banana.png")
+bomb = pygame.image.load(str(path) + '\\Game_Snake\\' + "bomb.png")
+berry = pygame.image.load(str(path) + '\\Game_Snake\\' + "berry.png")
+
+bg = pygame.image.load(str(path) + '\\Game_Snake\\' + 'snake_BG.jpg')
 body = [(0,0)]
 pygame.init()
 
